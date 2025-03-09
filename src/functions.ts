@@ -1,5 +1,6 @@
 /**
  * greet(name):
+ * Heba, Abdulrahman
  * - Accepts a "name" parameter of type "string"
  * - logs "Hello <name>"
  *
@@ -8,6 +9,7 @@
  */
 function greet(name: string): void {
   // Your code here
+  console.log(`Hello ${name}`)
 }
 
 /**
@@ -21,7 +23,7 @@ function greet(name: string): void {
  */
 function isOdd(n: number): boolean {
   // Your code here
-
+  if((n % 2) != 0) return true
   return false; // replace false with what you see is fit
 }
 
@@ -36,8 +38,16 @@ function isOdd(n: number): boolean {
  */
 function oddsSmallerThan(n: number): number {
   // Your code here
-
-  return -1; // replace -1 with what you see is fit
+  let temp: string = ""
+  let count: number = 0
+  for(let i = 0; i<n; i++){
+    if(isOdd(i)){
+      temp = temp + i + " "
+      count++
+    }
+  }
+  console.log(`${temp}`)
+  return count; // replace -1 with what you see is fit
 }
 
 /**
@@ -52,7 +62,14 @@ function oddsSmallerThan(n: number): number {
  */
 function squareOrDouble(n: number): number {
   // Your code here
-
+  if(isOdd(n)){ 
+    console.log(`${n*n}`)
+    return n*n
+  }
+  else{
+    console.log(`${n*2}`)
+    return n*2
+  }
   return -1; // replace -1 with what you see is fit
 }
 
